@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class Vehicle{
+            constructor(name, Company, Engine){
+                this.name = name;
+                this.Company = Company;
+                this.Engine = Engine;
+            }
+
+            getDetails(){
+            return (`The name of The Bike is ${this.name} company is ${this.Company} and it's Engine is ${this.Engine} `)
+        }
+
+        }
+        let bike1 = new Vehicle("MT15", "Yamaha", "150cc");
+        let bike2 = new Vehicle("Shine", 'Honda', '125cc');
+        // console.log(bike1.name)
+        // console.log(bike1.Company)
+        console.log(bike1.getDetails())
+        console.log(bike2.getDetails())
+
+    </script>
+</body>
+</html>

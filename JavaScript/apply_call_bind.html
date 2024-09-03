@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //apply
+        const numbers = [1,2,3,4,5];
+        const max = Math.max.apply(null, numbers);
+        console.log("Max Value :"+max);
+
+        const min = Math.min.apply(null, numbers);
+        console.log("Min Value :"+min);
+
+        const newArray = [4,5,6,7];
+        newArray.push.apply(newArray, numbers);
+        console.log("Combined :"+newArray)
+
+        //bind -> it is used to create new function.
+        name = "kapil";
+        var person = {
+            name : "satish",
+            getName : function () {
+                return this.name;
+            },
+
+        };
+
+        var personName = person.getName; // kapil
+        console.log(personName());
+        var myName = personName.bind(person);//satish
+        console.log(myName()); 
+
+
+        //call
+        function Employee(id, name){
+            this.id = id;
+            this.name = name;
+        }
+
+        function Salary(id, name, salary){
+            Employee.call(this, id, name);
+            this.salary = salary;
+        }
+
+        var empsal = new Salary(101, "kapil", 10000);
+        console.log(empsal.id+" "+empsal.name+" "+empsal.salary);
+
+
+        //map
+        let names= ["nilesh","kapil", "gaurav", "kp"];
+        let lengths = names.map((name) => name.length);
+        console.log(lengths)
+
+
+//
+        let numbers1 = [1,2,3,4,5,6];
+        let oddArray = [];
+        let oddNumbers = numbers1.map((no) => {
+            if(no % 2 != 0){
+                oddArray.push(no);
+            }
+            
+        });
+        console.log(oddArray)
+
+
+        //Starts with N.
+        var str = ["Rakesh", "Nilesh", "Neeta", "Nagnath"];
+        var NameswithN = [];
+        let names1 = str.map((n) =>{
+            if(n.startsWith("N")){
+                NameswithN.push(n);
+            }
+           
+        });
+        console.log(NameswithN);
+
+        // Ends With a.
+        var str = ["Rakesh", "Nilesh", "Neeta", "Nagnath", "seeta"];
+        var NameswithN = [];
+        let names2 = str.map((n) =>{
+            if(n.endsWith("a")){
+                NameswithN.push(n);
+            }
+           
+        });
+        console.log(NameswithN);
+
+
+    </script>
+</body>
+</html>

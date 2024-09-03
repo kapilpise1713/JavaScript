@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+
+        <!-- <label for="fname"><input type="text" id="fname" placeholder="Enter fname"></label>
+        <button onclick="perfectNum()">Submit</button> -->
+
+
+        <label for="Number"><input type="text" id="num" placeholder="Enter Number"></label>
+        <button onclick="perfectNum()">Submit</button>
+
+    </form>
+
+    <script>
+
+        function getData(){
+            var fname = document.getElementById("fname").value;
+            document.write(fname);
+
+        }
+
+        function perfectNum(){
+            let sum =0 ;
+            var copy = document.getElementById("num").value;
+            for(let i=0;i<copy;i++){
+                if(copy%i == 0){
+                    sum = sum + i;
+                }
+            }
+            if(sum == copy){
+                document.write("Perfect Number");
+            }else{
+                document.write("Not Perfect");
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>

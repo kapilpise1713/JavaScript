@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+
+    <script>
+      const person = {
+        id: 101,
+        name: "KP",
+        age: 22,
+        MyCars: {
+          car1: "Honda",
+          car2: "Suzuki",
+        },
+      };
+      document.write(
+        "Id of person is " + person.id + " " + "Car is " + person.MyCars["car1"]
+      );
+    </script>
+
+    <script>
+      const person1 = {
+        id: 101,
+        name: "SP",
+        age: 22,
+      };
+      const x = person; // 
+      x.id = 222;
+
+      document.write("<br>" + person.id);
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+<!-- //hoisting is possible with the primitive data types.
+//hoisting is not allowed with the objects.
+
+//const with primitive types behaves as a immutable &&
+//with the non-primitive types it behaves as a mutable. -->

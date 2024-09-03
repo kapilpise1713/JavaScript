@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function getData(data, getDataNext){
+            setTimeout(() => {
+                console.log("Data is :"+data);
+                if(getDataNext){
+                    getDataNext();
+                }
+                
+            }, 3000);
+        }
+        getData(1, () =>{
+            console.log("Getting data 2....")
+            getData(2, () =>{
+                console.log("Getting data 3....")
+                getData(3, () =>{
+                    console.log("Getting data 4...")
+                    getData(4);
+                })
+            })
+        });
+
+
+
+
+
+    </script>
+</body>
+</html>

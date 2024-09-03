@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const PlayerInfo = (name,basicSal, TA) =>{
+            TA = TA || 500;
+            sal = basicSal  + TA;
+            document.write("NAme of Player is :"+name+" <br>"+"salary is :"+(basicSal+TA))
+           
+        }
+        document.write(PlayerInfo("kapil",20000));
+
+        // Area Of Circle.
+        const AreaCircle = (r) =>{
+            let area = Math.PI * (r*r);
+            document.write("<br>"+area);
+        }
+        AreaCircle(3);
+
+        //Rest Parameter
+
+        function addition(...args){
+            sum = 0;
+            for(let i of args){
+                sum  = sum + i;
+            }
+            //console.log(sum)
+            
+            document.write("<br>"+sum);
+
+        }
+        addition(10,20);
+        addition(10,20,30);
+
+
+
+        //calculate total salary.
+        const salary1 = (basic, PF, ...allowns) =>{
+            var totalSal = basic - PF;
+            for(let i of allowns){
+                var tot = totalSal + i;
+            }
+            document.write("<br>"+tot);
+
+        }
+        salary1(10000,2000,1000);
+    </script>
+</body>
+</html>

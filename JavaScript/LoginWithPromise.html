@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FORM</title>
+    <style>
+      div {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <form name="form1">
+        <label for="">UserName</label>
+        <input type="text" id="un" name="un" autocomplete="true" /><br />
+        <label>Password</label>
+        <input
+          type="password"
+          id="pw"
+          visible="true"
+          name="pw"
+          autocomplete="true"
+        />
+        <br />
+        <br />
+
+        <input type="button" onclick="verifyUser()" value="Login" />
+      </form>
+    </div>
+
+    <script>
+      var username = ["kapil", "Nikhil", "kp", "Ram"];
+      var password = ["pise", "Patil", "DP", "Sham"];
+
+      function verifyUser() {
+        let flag = false;
+        return new Promise((resolve, reject) => {
+        
+          //let userName = document.form1.un.value;
+          let userName = document.getElementById("un").value;
+          for (let i of username) {
+            if (userName == i) {
+              flag = true;
+            }
+          }
+
+          if (flag === true) {
+            alert("Username validated");
+            resolve("succeed");
+            checkPw();
+          }else{
+            alert("UserName Not Matching")
+            reject("Promise Failed")
+            //open("/user_Pass.html")
+
+          }
+        });
+      }
+
+      function verifyPass(){
+        var flag = false;
+        var passWord = document.form1.pw.value;
+
+        for(let i of password){
+            if(passWord === i){
+                flag = true;
+                break;  
+            }
+        }
+        if(flag === true){
+            alert("Login Succeed");
+        }else{
+            alert("Password Not Matching");
+        }
+        
+      }
+    async function checkPw(){
+        await verifyPass();
+    }
+   
+    </script>
+  </body>
+</html>

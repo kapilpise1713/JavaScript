@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            color: red;
+        }
+
+
+    </style>
+</head>
+<body>
+    <form name="f1">
+        Enter First name:<input type="text" name="fname" onchange="validate2()">
+        <span id="ur"></span><br>
+        Enter Last name:<input type="text" name="lname" onchange="validate1()">
+        <span id="ur"></span><br>
+        Enter password : <input type="password" name="pass" onkeyup="validate()">
+        <span id="my"></span>
+        
+        <br>
+
+    </form>
+    <script>
+        function validate(){
+            var msg;
+            if(document.f1.pass.value.length > 5){
+                msg = "Password is good";
+            }else{
+                msg = "password is weak";
+
+            }
+            document.getElementById("my").innerText = msg;
+
+
+        }
+
+        function validate1(){
+            var msg;
+            if(document.f1.lname.value.length < 2 && document.f1.lname.value.length>0){
+                msg = "Your name cannot less than 2 characters";
+            }else if(document.f1.lname.value.length <= 0){
+                msg = "User name cannot be empty";
+            }
+            else if(document.f1.lname.value.length >=2){
+                msg = "Correct User name";
+
+            }
+            document.getElementById("ur").innerText = msg;
+        }
+
+        function validate2(){
+            var msg;
+            if(document.f1.fname.value.length < 2 && document.f1.fname.value.length>0){
+                msg = "Your name cannot leass than 2 characters";
+            }else if(document.f1.fname.value.length <= 0){
+                msg = "User name cannot be empty";
+            }
+            else if(document.f1.fname.value.length >=2){
+                msg = "Correct User name";
+
+            }
+            document.getElementById("ur").innerText = msg;
+        }
+
+
+    </script>
+</body>
+</html>

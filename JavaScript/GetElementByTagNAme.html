@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="test1">Hello</p>
+    <p>Hello</p>
+    <p>Hello</p>
+    <p class="test1">Hello</p>
+
+    <button onclick="test1()">submit</button>
+
+    <script>
+        function test(){
+            var total = document.getElementsByTagName('p');  //By TagName
+            //document.write(total.length);
+            for(let i=0;i<total.length;i++){
+                total[i].style.backgroundColor = "red";
+            }
+        }
+
+        function test1(){
+            var total = document.getElementsByClassName("test1"); //By ClassName
+            for(let i=0;i<total.length;i++){
+                total[i].style.color = "red";
+            }
+        }
+        
+    </script>
+</body>
+</html>

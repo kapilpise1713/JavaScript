@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CallBack</title>
+  </head>
+  <body>
+    <script>
+      // function hi(){
+      //     console.log(" Inside Hii")
+      // }
+
+      // setTimeout(hello = () =>{
+      //     console.log(" Inside Hello");
+      //     hi();
+
+      // },3000)
+
+
+
+      // function Postreel(){
+      //     console.log("post reel")
+
+      // }
+
+      // login = () =>{
+      //     console.log("loginn success")
+      //     Postreel()
+      // }
+      // login()
+
+
+
+
+      /*
+      function isOdd(number) {
+        return number % 2 != 0;
+      }
+
+      function isEven(number) {
+        return number % 2 == 0;
+      }
+
+      function filter(numbers, fn) {
+        let result = [];
+        for (const number of numbers) {
+          if (fn(number)) {
+            result.push(number);
+          }
+        }
+        return result;
+      }
+
+      var numbers = [1, 2, 3, 4, 5, 6, 7];
+      console.log(filter(numbers, isOdd));
+      console.log(filter(numbers, isEven));
+      //here the filter is a Higher Order function bcoz it accept another function as a argument & isOdd is a callabck() Function bcoz it is passed to another function as a Argument.
+
+     */
+
+
+     //Anonymous Function.
+     function filter(numbers, callback){
+      let result = [];
+
+      for(const number of numbers){
+        if(callback(number)){
+          result.push(number);
+        }
+      }
+      return result;
+     }
+
+     var numbers = [1,2,3,4,5,6,7,8,9];
+
+     let oddNumbers = filter(numbers, function(number){
+      return number % 2 != 0;
+     });
+
+     let evenNumbers = filter(numbers, function(number){
+      return number % 2 == 0;
+     });
+     console.log(oddNumbers)
+     console.log(evenNumbers)
+
+
+     ////
+     let oddNumber = filter(numbers, (number) => number % 2 != 0);
+     console.log(oddNumber)
+
+
+
+
+
+    //   function profile() {
+    //     console.log("Profile Displayed");
+    //   }
+
+    //   function login(sh) {
+    //     console.log("Login Successfully");
+    //     sh();
+    //   }
+    //   login(profile);
+
+
+   
+      //  function profile1() {
+      //  console.log("Profile Displayed");
+      //  }
+
+      // var uname = "satish";
+      // var password = 123;
+
+      // function login1(un,pass,showprof) {
+      //   if(un === this.uname && pass === this.password){
+      //       console.log("login SuccessFull")
+      //       showprof();
+
+      //   }else{
+      //       console.log("Username or password is Wrong");
+      //   }
+       
+      // }
+      // login1("satish",123,profile1);
+
+    </script>
+  </body>
+</html>

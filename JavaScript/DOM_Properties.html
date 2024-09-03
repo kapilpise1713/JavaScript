@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <p>Cost of Product is :</p>
+    <span id="test1"></span>
+    <button onclick="test()">Click Me</button> -->
+
+    <span>Your name is :</span>
+    <span id="test1"></span><br>
+
+    <form name="f1" >
+        <input type="text" id="name">
+        <button onclick="test1()">Click me</button>
+    </form>
+    <br>
+
+    <script>
+        function test1(){
+            var msg = "";
+            msg = document.f1.name.value;
+
+            document.getElementById("test1").innerText = msg;
+        }
+
+
+
+
+    </script>
+
+
+
+
+
+    <!-- <script>
+        function test(){
+            var data = 100;
+            document.getElementById("test1").innerHTML = data;  //innerHTML
+        }
+    </script> -->
+</body>
+</html>

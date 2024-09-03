@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // const fruits = ["Apple", "Orange"];
+        // let[posOne, posTwo] = fruits;
+        // console.log(posOne);
+        // console.log(posTwo);
+
+        //With Third Variable
+        console.log("With Third Variable")
+        const fruits = ["Apple", "Orange"];
+        let[posOne, posTwo] = fruits;
+        temp = posOne;
+        posOne = posTwo;
+        posTwo = temp;
+        console.log(posOne);
+        console.log(posTwo);
+
+
+
+        //Wthout Using Third Variable.
+        console.log("Without Third Variable")
+        const fruits2 = ["mango", "Pomogranate"];
+        let[pOne, pTwo] = fruits2;
+        [pOne, pTwo] = [pTwo, pOne];
+        console.log(pOne)
+        console.log(pTwo)
+
+        //
+        const nums = [10,20];
+        let[num1, num2] = nums;
+        [num1, num2] = [num2, num1]
+        console.log(num1)
+        console.log(num2)
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        
+    //   var avlBal = 1000;
+    //   function Balance() {
+    //     console.log("Available Amount is :"+avlBal);
+    //   }
+      
+
+    //   function withdraw(WAmount, Showbal) {
+    //     if (WAmount > avlBal) {
+    //       console.log("You cannot Withdraw bcoz Insufficient Balance");
+    //     } else {
+    //       avlBal = avlBal - WAmount;
+    //       console.log("Withdraw SuccessFull!!!!")
+    //       Showbal();
+    //     }
+    //   }
+    //   withdraw(500, Balance);
+
+
+
+    var amount = 5000;
+    var WithdrawA = 10000;
+    var DepositA = 20000;
+
+    function withdraw(WAmount){
+        amount = amount - WithdrawA;
+        console.log("Withdraw Successfully")
+        console.log("Available balanace is :"+amount)
+    }
+
+    const checkbalance = (f) =>{
+        if(amount > WithdrawA){
+            withdraw(WithdrawA);
+        }else{
+            console.log("Insufficient Funds..")
+            setTimeout(() =>{
+                amount = amount + DepositA;
+                console.log("Deposit Successfullyy :"+amount);
+                withdraw(WithdrawA);
+            },3000)
+
+        }
+    }
+    checkbalance();
+
+
+    </script>
+  </body>
+</html>
