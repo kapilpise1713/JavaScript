@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RestParameter</title>
+  </head>
+  <body>
+    <script>
+      function myFunction(...args) {
+        console.log(args);
+      }
+      myFunction(11, 22, 33);
+      myFunction(1, 2, 3, 4, 5);
+
+      function sum(...args){
+        let sum = 0;
+        for(let i of args){
+            sum += i;
+        }
+        console.log(sum);
+      }
+      sum(10,20,30);
+    </script>
+  </body>
+</html>
+
+<!-- In JavaScript, the rest parameter allows you to pass an indefinite number of
+arguments to a function as an array. It's useful when you don't know how many
+arguments a function will receive, or when you want to handle multiple arguments
+without specifying each one individually. -->
