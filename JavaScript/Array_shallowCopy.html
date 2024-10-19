@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy</title>
+</head>
+<body>
+    
+    <script>
+        const arr = [11,22,33];
+
+        function copy(){
+            const shallowCopy = [...arr]; // Using spread Operator(...)
+            //const shallowCopy = arr.slice(); // Using slice() method
+            //const shallowCopy = [].concat(arr); // Using Concat()
+            return shallowCopy;
+        }
+
+        const copiedArray = copy();
+        console.log("Original Array :", arr);
+        console.log("ShallowCopied Array :", copiedArray);
+
+
+
+    </script>
+
+
+</body>
+</html>
