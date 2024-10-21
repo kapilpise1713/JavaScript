@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duplicates</title>
+</head>
+<body>
+    <script>
+        const arr = [1,2,2,3,4,4,5];
+
+        function removeDuplicates(arr){
+            return [...new Set(arr)];  //The spread operator (...) is used to convert the Set back into 
+        }                              //an array containing only unique elements.
+        
+        console.log(removeDuplicates(arr));
+    </script>
+</body>
+</html>
